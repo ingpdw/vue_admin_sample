@@ -1,5 +1,14 @@
 <template>
   <div>
+
+    <nc-card>
+      <div slot="title">chart demo</div>
+      <div slot="description">chart 샘플</div>
+      <div slot="body">
+          <nc-chart-js></nc-chart-js>
+      </div>
+    </nc-card>
+
     <nc-card>
       <div slot="title">chart demo</div>
       <div slot="description">chart 샘플</div>
@@ -12,8 +21,8 @@
       <div slot="title">table code</div>
       <div slot="description">chart 코드</div>
       <div slot="body">
-        <pre v-highlightjs>
-          <code class="javascript">
+        <pre class="language-js">
+          <code>
 
 import { GChart } from 'vue-google-charts';
 
@@ -50,6 +59,10 @@ export default {
 <script>
 import ncCard from '../../Card/index.vue';
 import ChartCard from '../../Chart/index.vue';
+import ncChartJs from '../../Chart/chartJs.vue';
+
+import HighlightJS from 'highlightjs';
+HighlightJS.initHighlightingOnLoad();
 
 export default {
   name: 'app',
@@ -59,6 +72,7 @@ export default {
   components: {
     ChartCard,
     ncCard,
+    ncChartJs,
   },
 };
 </script>

@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import './assets/css/demo.css';
-import 'codemirror/lib/codemirror.css'
+import 'codemirror/lib/codemirror.css';
+import 'prismjs/themes/prism.css';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -11,6 +12,7 @@ import VueCodemirror from 'vue-codemirror';
 import VueGoogleCharts from 'vue-google-charts';
 import Routes from './routes/index';
 import App from './App.vue';
+import VuePrism from 'vue-prism';
 
 
 Vue.config.productionTip = false;
@@ -20,6 +22,7 @@ Vue.use(BootstrapVue);
 Vue.use(VueCodemirror);
 Vue.use(VueHighlightJS);
 Vue.use(VueGoogleCharts);
+Vue.use(VuePrism);
 
 const router = new VueRouter({
   routes: Routes,

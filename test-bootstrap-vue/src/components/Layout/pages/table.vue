@@ -11,7 +11,11 @@
       <div slot="title">table code</div>
       <div slot="description">테이블 코드</div>
       <div slot="body">
-        <codemirror v-model="code"></codemirror>
+        <pre class="language-js">
+          <code>
+            {{code}}
+          </code>
+        </pre>
       </div>
     </nc-card>
   </div>
@@ -28,7 +32,8 @@ export default {
     return {
       title: 'table demo',
       description: '테이블 샘플',
-      code: `<table class="table table-hover table-striped">
+      code: `
+<table class="table table-hover table-striped">
   <thead>
     <tr>
       <th>game</th>
